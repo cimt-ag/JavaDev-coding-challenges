@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:h2:./petshop-db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: sa
+  liquibase:
+    change-log: classpath:db/master.changeLog.xml
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  h2:
+    console:
+      enabled: true
+server.port: 8080
+
+springdoc:
+  packagesToScan: cimt
+  pathsToMatch: /**
+  swagger-ui:
+    path: swagger-ui.html	

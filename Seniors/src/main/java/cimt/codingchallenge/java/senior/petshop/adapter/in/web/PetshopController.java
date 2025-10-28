@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import cimt.codingchallenge.java.senior.petshop.adapter.in.web.model.PetWebModelItem;
 import cimt.codingchallenge.java.senior.petshop.domain.usecase.in.LoadRegisteredPets;
 import cimt.codingchallenge.java.senior.petshop.domain.usecase.in.RegisterPet;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 
 @RestController
@@ -24,13 +24,13 @@ public class PetshopController {
 	private final PetWebModelMapper petWebModelMapper;
 
 	@PostMapping(PET_BASE_PATH)
-	@ApiOperation("Register a new pet in the pet shop")
+	@Operation(description = "Register a new pet in the pet shop")
 	public void registerPet(@RequestBody PetWebModelItem pet) {
 		registerPet.newPet(petWebModelMapper.toDomainModel(pet));
 	}
 
 	@GetMapping(PET_BASE_PATH)
-	@ApiOperation("Receive an overwiev over all pets registered in the pet shop")
+	@Operation(description = "Receive an overwiev over all pets registered in the pet shop")
 	public List<PetWebModelItem> getRegisteredPets() {
 		return loadRegisteredPets.all().stream().map(petWebModelMapper::toWebModelItem).toList();
 	}

@@ -12,5 +12,6 @@
             <constraints nullable="true" />
          </column>
       </createTable>
+      <createSequence incrementBy="50" minValue="1" sequenceName="PET_SEQ" startValue="1"/>
    </changeSet>
 </databaseChangeLog>
