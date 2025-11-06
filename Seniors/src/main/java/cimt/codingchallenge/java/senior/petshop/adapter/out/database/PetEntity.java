@@ -17,11 +17,11 @@ import lombok.Setter;
 @Entity(name = "PET")
 public class PetEntity {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long ID;
-	@Column(name = "NAME_")
-	private String name;
-	@Column(name = "TYPE_")
-	private String type;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private long ID;
+  @Column(name = "NAME_")
+  private String name;
+  @Column(name = "TYPE_")
+  private String type;
 }

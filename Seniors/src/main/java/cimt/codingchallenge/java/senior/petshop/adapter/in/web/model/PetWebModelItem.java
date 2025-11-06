@@ -13,9 +13,9 @@ import lombok.Setter;
 @NoArgsConstructor
 public class PetWebModelItem {
 
-	@Schema(example = "Rex")
-	private String name;
+  @Schema(example = "Rex")
+  private String name;
 
-	@Schema(example = "Dog")
-	private String type;
+  @Schema(example = "Dog")
+  private String type;
 }

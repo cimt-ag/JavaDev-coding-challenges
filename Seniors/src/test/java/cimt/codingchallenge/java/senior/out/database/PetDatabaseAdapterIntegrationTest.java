@@ -11,15 +11,15 @@ import cimt.codingchallenge.java.senior.petshop.adapter.out.database.PetEntityMa
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-@Import({ PetDatabaseAdapter.class, PetEntityMapperImpl.class })
+@Import({PetDatabaseAdapter.class, PetEntityMapperImpl.class})
 class PetDatabaseAdapterIntegrationTest {
 
-	@Autowired
-	PetDatabaseAdapter databaseAdapter;
+  @Autowired
+  PetDatabaseAdapter databaseAdapter;
 
-	@Test
-	void should_allow_saving_and_retreiving_pets() {
-		//TODO: Implement me!
-	}
+  @Test
+  void should_allow_saving_and_retreiving_pets() {
+    // TODO: Implement me!
+  }
 
 }

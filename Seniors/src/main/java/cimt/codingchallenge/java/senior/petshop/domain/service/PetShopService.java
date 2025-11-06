@@ -15,17 +15,17 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class PetShopService implements RegisterPet, LoadRegisteredPets {
 
-	private final PetQuery petQuery;
-	private final PetCommand petCommand;
+  private final PetQuery petQuery;
+  private final PetCommand petCommand;
 
-	@Override
-	public List<Pet> all() {
-		return petQuery.getAll();
-	}
+  @Override
+  public List<Pet> all() {
+    return petQuery.getAll();
+  }
 
-	@Override
-	public void newPet(Pet newPet) {
-		petCommand.persist(newPet);
-	}
+  @Override
+  public void newPet(Pet newPet) {
+    petCommand.persist(newPet);
+  }
 
 }

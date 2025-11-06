@@ -17,21 +17,21 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class PetshopController {
 
-	private static final String PET_BASE_PATH = "pet";
+  private static final String PET_BASE_PATH = "pet";
 
-	private final RegisterPet registerPet;
-	private final LoadRegisteredPets loadRegisteredPets;
-	private final PetWebModelMapper petWebModelMapper;
+  private final RegisterPet registerPet;
+  private final LoadRegisteredPets loadRegisteredPets;
+  private final PetWebModelMapper petWebModelMapper;
 
-	@PostMapping(PET_BASE_PATH)
-	@Operation(description = "Register a new pet in the pet shop")
-	public void registerPet(@RequestBody PetWebModelItem pet) {
-		registerPet.newPet(petWebModelMapper.toDomainModel(pet));
-	}
+  @PostMapping(PET_BASE_PATH)
+  @Operation(description = "Register a new pet in the pet shop")
+  public void registerPet(@RequestBody PetWebModelItem pet) {
+    registerPet.newPet(petWebModelMapper.toDomainModel(pet));
+  }
 
-	@GetMapping(PET_BASE_PATH)
-	@Operation(description = "Receive an overwiev over all pets registered in the pet shop")
-	public List<PetWebModelItem> getRegisteredPets() {
-		return loadRegisteredPets.all().stream().map(petWebModelMapper::toWebModelItem).toList();
-	}
+  @GetMapping(PET_BASE_PATH)
+  @Operation(description = "Receive an overwiev over all pets registered in the pet shop")
+  public List<PetWebModelItem> getRegisteredPets() {
+    return loadRegisteredPets.all().stream().map(petWebModelMapper::toWebModelItem).toList();
+  }
 }

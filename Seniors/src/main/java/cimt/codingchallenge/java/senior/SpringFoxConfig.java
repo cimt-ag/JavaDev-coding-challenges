@@ -10,11 +10,13 @@ import io.swagger.v3.oas.models.info.License;
 @Configuration
 public class SpringFoxConfig {
 
-	@Bean
-	public OpenAPI springShopOpenAPI() {
-		return new OpenAPI().info(new Info().title("PetShop API")
-				.description("Pet shop sample application")
-				.version("v0.0.1")
-				.license(new License().name("Apache 2.0").url("http://springdoc.org")));
-	}
+  @Bean
+  public OpenAPI springShopOpenAPI() {
+    return new OpenAPI()
+        .info(new Info()
+            .title("PetShop API")
+            .description("Pet shop sample application")
+            .version("v0.0.1")
+            .license(new License().name("Apache 2.0").url("http://springdoc.org")));
+  }
 }

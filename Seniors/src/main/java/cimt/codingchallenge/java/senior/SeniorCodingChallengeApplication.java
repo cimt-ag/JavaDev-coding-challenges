@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SeniorCodingChallengeApplication {
 
-	public static void main(String... args) {
-		SpringApplication.run(SeniorCodingChallengeApplication.class, args);
-	}
+  public static void main(String... args) {
+    SpringApplication.run(SeniorCodingChallengeApplication.class, args);
+  }
 
 }

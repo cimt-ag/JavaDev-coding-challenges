@@ -9,7 +9,7 @@ import cimt.codingchallenge.java.senior.petshop.domain.model.Pet;
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING)
 public interface PetWebModelMapper {
 
-	PetWebModelItem toWebModelItem(Pet pet);
+  PetWebModelItem toWebModelItem(Pet pet);
 
-	Pet toDomainModel(PetWebModelItem pet);
+  Pet toDomainModel(PetWebModelItem pet);
 }

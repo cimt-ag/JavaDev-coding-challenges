@@ -8,7 +8,7 @@ import cimt.codingchallenge.java.senior.petshop.domain.model.Pet;
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING)
 public interface PetEntityMapper {
 
-	PetEntity toDatabaseEntity(Pet pet);
+  PetEntity toDatabaseEntity(Pet pet);
 
-	Pet toDomainModel(PetEntity petEntity);
+  Pet toDomainModel(PetEntity petEntity);
 }

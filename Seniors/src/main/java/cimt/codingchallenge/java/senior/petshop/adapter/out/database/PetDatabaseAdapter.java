@@ -14,18 +14,20 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class PetDatabaseAdapter implements PetQuery, PetCommand {
 
-	private final PetEntityMapper petEntityMapper;
-	private final PetRepository petRepository;
+  private final PetEntityMapper petEntityMapper;
+  private final PetRepository petRepository;
 
-	@Override
-	public void persist(Pet pet) {
-		petRepository.save(petEntityMapper.toDatabaseEntity(pet));
-	}
+  @Override
+  public void persist(Pet pet) {
+    petRepository.save(petEntityMapper.toDatabaseEntity(pet));
+  }
 
-	@Override
-	public List<Pet> getAll() {
-		return StreamSupport.stream(petRepository.findAll().spliterator(), false).map(petEntityMapper::toDomainModel)
-				.toList();
-	}
+  @Override
+  public List<Pet> getAll() {
+    return StreamSupport
+        .stream(petRepository.findAll().spliterator(), false)
+        .map(petEntityMapper::toDomainModel)
+        .toList();
+  }
 
 }
