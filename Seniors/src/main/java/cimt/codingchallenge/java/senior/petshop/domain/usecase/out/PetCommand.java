@@ -9,5 +9,5 @@ public interface PetCommand {
 	 * 
 	 * @param pet the pet to be persisted.
 	 */
-	void persist (Pet pet);
+	void persist(Pet pet);
 }

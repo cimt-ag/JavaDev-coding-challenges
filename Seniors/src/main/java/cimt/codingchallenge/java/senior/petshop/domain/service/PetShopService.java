@@ -24,7 +24,7 @@ public class PetShopService implements RegisterPet, LoadRegisteredPets {
 	}
 
 	@Override
-	public void newPet(Pet newPet) {		
+	public void newPet(Pet newPet) {
 		petCommand.persist(newPet);
 	}
 
