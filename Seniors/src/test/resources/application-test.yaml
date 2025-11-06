@@ -4,7 +4,7 @@ spring:
     username: sa
     password: sa
   liquibase:
-    change-log: classpath:db/master.changeLog.xml
+    change-log: db/master.changelog.xml
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
